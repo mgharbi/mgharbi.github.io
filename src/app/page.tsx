@@ -5,6 +5,10 @@ import { faGoogleScholar, faGithub, faTwitter, faLinkedin } from '@fortawesome/f
 import { faCamera, faHouse, faFilePdf, faCodeBranch } from '@fortawesome/free-solid-svg-icons'
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
+import {students }from "./students"
+import {projects} from "./projects"
+
+
 // import profilePic from '../../public/profile.png'
 
 function Project({project}: {project: ProjectInterface}) {
@@ -21,13 +25,24 @@ function Project({project}: {project: ProjectInterface}) {
   return (
     <div className="flex">
       <Link href={project.homepage} className="hover:text-sky-500">
-        <div className="flex-none w-36 h-24">
+        <div className="flex-none w-36 h-24 relative">
           { project.image ? (
             <Image
               src={`/images/projects/${project.image}`}
               width={500}
               height={500}
               alt=""
+              className="absolute"
+            />
+            ) : null
+          }
+          { project.alt_image ? (
+            <Image
+              src={`/images/projects/${project.alt_image}`}
+              width={500}
+              height={500}
+              alt=""
+              className="absolute hover:opacity-0"
             />
             ) : null
           }
@@ -50,7 +65,7 @@ function Project({project}: {project: ProjectInterface}) {
           }
           { project.pdf ? (
               <li className="w-6 sm:w-4">
-              <Link href="" className="hover:text-sky-500">
+              <Link href={project.pdf} className="hover:text-sky-500">
                 <FontAwesomeIcon icon={faFilePdf} fixedWidth listItem/> 
               </Link>
               </li>
@@ -58,7 +73,7 @@ function Project({project}: {project: ProjectInterface}) {
           }
           { project.code ? (
               <li className="w-6 sm:w-4">
-              <Link href="" className="hover:text-sky-500">
+              <Link href={project.code} className="hover:text-sky-500">
                 <FontAwesomeIcon icon={faGithub} fixedWidth listItem/> 
               </Link>
               </li>
@@ -82,28 +97,28 @@ interface ProjectInterface {
 }
 
 function Projects() {
-  let projects = [
-    {
-      "title": "One-step Diffusion with Distribution Matching Distillation",
-      "authors": ["Tianwei Yin", "Michaël Gharbi", "Richard Zhang", "Eli Shechtman", "Frédo Durand", "William T. Freeman", "Taesung Park"],
-      "venue": "CVPR",
-      "year": "2024",
-      "homepage": "https://tianweiy.github.io/dmd/",
-      "code": "http",
-      "pdf": "https://arxiv.org/abs/2311.18828",
-      "image": "dmd.png"
-    },
-    {
-      "title": "project 2",
-      "authors": ["Michaël Gharbi", "Frédo Durand"],
-      "venue": "CVPR",
-      "year": "2024",
-      "homepage": "http",
-      "code": "http",
-      "pdf": "http",
-      "image": ""
-    },
-  ];
+  // let projects = [
+  //   {
+  //     "title": "One-step Diffusion with Distribution Matching Distillation",
+  //     "authors": ["Tianwei Yin", "Michaël Gharbi", "Richard Zhang", "Eli Shechtman", "Frédo Durand", "William T. Freeman", "Taesung Park"],
+  //     "venue": "CVPR",
+  //     "year": "2024",
+  //     "homepage": "https://tianweiy.github.io/dmd/",
+  //     "code": "http",
+  //     "pdf": "https://arxiv.org/abs/2311.18828",
+  //     "image": "dmd.png"
+  //   },
+  //   {
+  //     "title": "project 2",
+  //     "authors": ["Michaël Gharbi", "Frédo Durand"],
+  //     "venue": "CVPR",
+  //     "year": "2024",
+  //     "homepage": "http",
+  //     "code": "http",
+  //     "pdf": "http",
+  //     "image": ""
+  //   },
+  // ];
   return (
     <ul>
       {
@@ -151,158 +166,6 @@ function Divider({title}: { title: string }) {
 }
 
 function Students() {
-  let students = [
-    {
-      "name": "Julien Philip",
-      "webpage": "https://www-sop.inria.fr/members/Julien.Philip/",
-      "year": 2019,
-    },
-    {
-      "name": "Dmitriy Smirnov",
-      "webpage": "https://dsmirnov.me/",
-      "year": 2019,
-    },
-    {
-      "name": "Utkarsh Singhal",
-      "webpage": "https://utkarsh.ai",
-      "year": 2019,
-    },
-    {
-      "name": "Tamar Rott Shaham",
-      "webpage": "https://tamarott.github.io", 
-      "year": 2019,
-    },
-    {
-      "name": "Zhihao Xia",
-      "webpage": "https://www.cse.wustl.edu/~zhihao.xia/",
-      "year": 2019,
-    },
-    {
-      "name": "Spandan Madan", 
-      "webpage": "https://spandan-madan.github.io/about",
-      "year": 2019,
-    },
-    {
-      "name": "Ishit Mehta",
-      "webpage": "https://scholar.google.co.in/citations?user=pUqhY-wAAAAJ&hl=en",
-      "year": 2020,
-    },
-    {
-      "name": "Mustafa Işık",
-      "webpage": "https://www.mustafaisik.net/",
-      "year": 2020,
-    },
-    {
-      "name": "Pradyumna Reddy",
-      "webpage": "https://preddy5.github.io/",
-      "year": 2020,
-    },
-    {
-      "name": "James Hong",
-      "webpage": "https://jhong93.github.io/",
-      "year": 2020,
-    },
-    {
-      "name": "Karima Ma",
-      "webpage": "https://people.csail.mit.edu/karima/home.html",
-      "year": 2020,
-    },
-    {
-      "name": "Thibaut Ehret",
-      "webpage": "https://tehret.github.io/",
-      "year": 2020,
-    },
-    {
-      "name": "Holly Jackson",
-      "webpage": "https://www.holly-jackson.com/about/",
-      "year": 2020,
-    },
-    {
-      "name": "Lucy Chai",
-      "webpage": "https://people.csail.mit.edu/lrchai/",
-      "year": 2021,
-    },
-    {
-      "name": "Sai Praveen Bangaru",
-      "webpage": "http://people.csail.mit.edu/sbangaru/",
-      "year": 2021,
-    },
-    {
-      "name": "Difan Liu",
-      "webpage": "https://difanliu.github.io/",
-      "year": 2021,
-    },
-    {
-      "name": "Camille Biscarrat",
-      "webpage": "https://www.csail.mit.edu/person/camille-biscarrat",
-      "year": 2021,
-    },
-    {
-      "name": "Jerry Hsu",
-      "webpage": "https://chichenghsu.com/",
-      "year": 2021,
-    },
-    {
-      "name": "Dave Epstein",
-      "webpage": "https://dave.ml/",
-      "year": 2021,
-    },
-    {
-      "name": "Yash Belhe",
-      "webpage": "https://yashbelhe.github.io/",
-      "year": 2022,
-    },
-    {
-      "name": "Yotam Nitzan",
-      "webpage": "https://yotamnitzan.github.io/",
-      "year": 2022,
-    },
-    {
-      "name": "Lucas Valença",
-      "webpage": "https://valenca.io/",
-      "year": 2022,
-    },
-    {
-      "name": "Caroline Chan",
-      "webpage": "https://people.csail.mit.edu/cmchan/",
-      "year": 2022,
-    },
-    {
-      "name": "Goutam Bhat",
-      "webpage": "https://goutamgmb.github.io/",
-      "year": 2022,
-    },
-    {
-      "name": "Prafull Sharma",
-      "webpage": "https://prafullsharma.net/",
-      "year": 2022,
-    },
-    {
-      "name": "Yinbo Chen",
-      "webpage": "https://yinboc.github.io/",
-      "year": 2022,
-    },
-    {
-      "name": "Ke Wang",
-      "webpage": "https://kewang0622.github.io/",
-      "year": 2022,
-    },
-    {
-      "name": "Jiteng Mu",
-      "webpage": "https://jitengmu.github.io/",
-      "year": 2023,
-    },
-    {
-      "name": "Tianwei Yin",
-      "webpage": "https://tianweiy.github.io/",
-      "year": 2023,
-    },
-    {
-      "name": "Hadi AlZayer",
-      "webpage": "https://hadizayer.github.io/",
-      "year": 2023,
-    },
-  ];
   return (
     <div>
       {
@@ -351,7 +214,6 @@ export default function Home() {
               where I had the chance to work under the
               supervision of <Link className="hover:text-sky-500 font-semibold" href="http://people.csail.mit.edu/fredo/" target="_blank">Prof. Frédo Durand</Link>. My research
               interests include computational photography,
-              computer vision and machine learning. Prior to
               joining MIT, I completed my undergraduate studies
               in France, at <Link className="hover:text-sky-500 font-semibold" href="https://www.polytechnique.edu/en" target="_blank">École Polytechnique</Link>, with a focus on
               Applied Mathematics.
@@ -361,6 +223,13 @@ export default function Home() {
           </p>
         </div>
       </div>
+      <Divider title="Past students"/>
+      <div className="sm:pt-0 sm:px-4">
+        <p className="py-4 text-sm text-justify">
+          I have had the great privilege of mentoring and collaborating with wonderful students:
+          <Students/>
+        </p>
+      </div>
       <Divider title="Research"/>
       <div className="">
         <Projects/>
@@ -368,13 +237,6 @@ export default function Home() {
       {/* <Divider title="Technology"/>
       <div className="">
       </div> */}
-      <Divider title="Past students"/>
-      <div className="">
-        <p className="pt-2 text-sm text-justify">
-          I have had the great privilege of mentoring and collaborating with wonderful students:
-          <Students/>
-        </p>
-      </div>
     </main>
   );
 }
