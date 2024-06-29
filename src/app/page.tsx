@@ -17,14 +17,26 @@ function Project({project}) {
   }).join('');
 
   return (
-    <div className="flex bg-cyan-400">
-      <div className="flex-none bg-yellow-300 w-36 h-36">
-        Photo
-      </div>
+    <div className="flex">
+      <Link href={project.homepage} className="hover:text-sky-500">
+        <div className="flex-none w-36 h-24">
+          { project.image ? (
+            <Image
+              src={`/images/projects/${project.image}`}
+              width={500}
+              height={500}
+              alt=""
+            />
+            ) : null
+          }
+        </div>
+      </Link>
       <div className="ps-2 text-sm sm:px-4">
-        <h3 className="font-semibold">{project.title}</h3>
-        <p className="italic">{authorList}</p>
-        <p>{project.venue} {project.year}</p>
+        <Link href={project.homepage} className="hover:text-sky-500">
+          <h3 className="font-semibold">{project.title}</h3>
+          <p className="italic">{authorList}</p>
+          <p>{project.venue} {project.year}</p>
+        </Link>
         <ul className="flex space-x-4 sm:space-x-2 items-center pt-2">
           { project.homepage ? (
               <li className="w-6 sm:w-4">
@@ -59,20 +71,31 @@ function Project({project}) {
 function Projects() {
   let projects = [
     {
-      "title": "project 1",
+      "title": "One-step Diffusion with Distribution Matching Distillation",
+      "authors": ["Tianwei Yin", "Michaël Gharbi", "Richard Zhang", "Eli Shechtman", "Frédo Durand", "William T. Freeman", "Taesung Park"],
+      "venue": "CVPR",
+      "year": "2024",
+      "homepage": "https://tianweiy.github.io/dmd/",
+      "code": "http",
+      "pdf": "https://arxiv.org/abs/2311.18828",
+      "image": "dmd.png"
+    },
+    {
+      "title": "project 2",
       "authors": ["Michaël Gharbi", "Frédo Durand"],
       "venue": "CVPR",
       "year": "2024",
       "homepage": "http",
       "code": "http",
       "pdf": "http",
-    }
+      "image": ""
+    },
   ];
   return (
     <ul>
       {
         projects.map((project, index) => (
-          <li key={index}>
+          <li key={index} className="my-4">
             <Project project={project}/>
           </li>
         ))
@@ -94,7 +117,7 @@ function SocialLinks() {
       {
         links.map(([link, icon], index) => (
           <li className="w-6 sm:w-5" key={index}>
-            <Link href={link} className="hover:text-sky-500">
+            <Link href={link.toString()} className="hover:text-sky-500">
               <FontAwesomeIcon icon={icon} fixedWidth listItem/> 
             </Link>
           </li>
@@ -114,59 +137,113 @@ function Divider({title}) {
   );
 }
 
+function Students() {
+  let students = [
+    {
+      "name": "Julien Philip",
+      "webpage": "https://www-sop.inria.fr/members/Julien.Philip/",
+      "year": 2019,
+    },
+    {
+      "name": "Dmitriy Smirnov",
+      "webpage": "https://dsmirnov.me/",
+      "year": 2019,
+    },
+    {
+      "name": "Utkarsh Singhal",
+      "webpage": "https://utkarsh.ai",
+      "year": 2019,
+    },
+    {
+      "name": "Tamar Rott Shaham",
+      "webpage": "https://tamarott.github.io", 
+      "year": 2019,
+    },
+    // {
+    //   "name":,
+    //   "webpage":,
+    //   "year": 2019,
+    // },
+    // {
+    //   "name":,
+    //   "webpage":,
+    //   "year": 2019,
+    // },
+    // {
+    //   "name":,
+    //   "webpage":,
+    //   "year": 2019,
+    // },
+  ];
+  return (
+    <div>
+      {
+        students.map((student, index) => (
+          <span key={index} className="inline after:content-[','] last:after:content-[''] pe-1">
+            <Link className="hover:text-sky-500" href={student.webpage}>{student.name}</Link> 
+          </span>
+        ))
+      }
+    </div>
+  );
+}
+
 export default function Home() {
   return (
-    <main className="p-2 sm:p-6 lg:px-12 md:px-6 sm:px-6 font-sans">
-      <div className="flex flex-col sm:flex-row items-center sm:items-start bg-cyan-400">
-        <div className="bg-purple-300 flex flex-col items-center">
-          <div className="flex-none bg-yellow-300 w-36 h-36 rounded-full">
-            Photo
+    <main className="p-4 sm:p-6 lg:px-12 md:px-6 sm:px-6 font-sans">
+      <div className="flex flex-col sm:flex-row items-center sm:items-start">
+        <div className=" flex flex-col items-center">
+          <div className="flex-none w-36 h-36">
+          <Image
+            src="/images/profile.png"
+            width={500}
+            height={500}
+            alt="Picture of the author"
+            className="rounded-full"
+          />
           </div>
           <SocialLinks/>
         </div>
-        <div className="bg-purple-200 pt-2 pb-4 sm:pt-0 sm:px-4">
-          <h1 className="text-2xl">Michaël Gharbi</h1>
-          <h3 className="text-gray-600">Research Scientist - Adobe</h3>
-          <ul className="flex flex-col my-1 text-sm items-start ">
-            <li><a href="mailto:mgharbi@adobe.com" className="hover:text-sky-500">mgharbi@adobe.com</a></li>
-            <li>+ 1 (857)-210-9559</li>
-            <li><Link href="https://goo.gl/maps/Dpp2mXCJHjpRxwHL9" className="hover:text-sky-500">Adobe, 601 Townsend St, CA 94103</Link></li>
-          </ul>
-          <p className="pt-2 text-sm text-justify">
+        <div className="pt-2 pb-4 sm:pt-0 sm:px-4">
+          <div className="flex flex-col items-center sm:items-start">
+            <h1 className="text-2xl">Michaël Gharbi</h1>
+            <h3 className="text-gray-600">Co-Founder & Research Scientist</h3>
+            <ul className="flex flex-col my-1 text-sm items-center sm:items-start">
+              <li><a href="mailto:michael.yanis.gharbi@gmail.com" className="hover:text-sky-500">michael.yanis.gharbi@gmail.com</a></li>
+              <li>+ 1 (857)-210-9559</li>
+            </ul>
+          </div>
+          <p className="pt-4 text-sm text-justify">
             <span className="font-semibold">Bio. </span>
-            I am currently a Research Scientist at Adobe. I was previously a PhD
-            student at MIT CSAIL, where I had the chance to work under the
-            supervision of Prof. Frédo Durand. My research interests include
-            computational photography, computer vision and machine learning. Prior
-            to joining MIT, I completed my undergraduate studies in France, at
-            École Polytechnique, with a focus on Applied Mathematics.
+              I am a co-founder and research scientist at a stealth startup. I can hopefully share more details soon.
+              Previously, I was a Research Scientist at Adobe.
+              Before that, I was
+              a PhD student at <Link className="hover:text-sky-500 font-semibold" href="https://www.csail.mit.edu/" target="_blank">MIT CSAIL</Link>,
+              where I had the chance to work under the
+              supervision of <Link className="hover:text-sky-500 font-semibold" href="http://people.csail.mit.edu/fredo/" target="_blank">Prof. Frédo Durand</Link>. My research
+              interests include computational photography,
+              computer vision and machine learning. Prior to
+              joining MIT, I completed my undergraduate studies
+              in France, at <Link className="hover:text-sky-500 font-semibold" href="https://www.polytechnique.edu/en" target="_blank">École Polytechnique</Link>, with a focus on
+              Applied Mathematics.
           </p>
-          <p className="pt-2 text-sm text-justify">
-            <span className="font-semibold">Internships. </span>
-            I am always happy to host and mentor PhD and motivated MSc students
-            at Adobe, San Francisco (typically over the summer). If you would
-            like to work with me, please send me an email describing your past
-            experience and current research interests. Make sure to include your
-            CV, 1 or 2 references and a paragraph about specific topics you
-            would like to explore during your internship.
+          <p className="pt-4 text-sm text-justify">
+            If you are looking for the economist, that would be my sister <Link className="hover:text-sky-500" href="https://sarahgharbi.github.io/" target="_blank">Sarah</Link>.
           </p>
         </div>
       </div>
       <Divider title="Research"/>
-      <div className="bg-red-400">
+      <div className="">
         <Projects/>
       </div>
-      <Divider title="Internships"/>
-      <div className="bg-red-300">
-        <h3>Internships</h3>
-        <p>
-            In the past, I have had the pleasure to collaborate with the following
-            students: Julien Philip, Dmitriy Smirnov, Utkarsh Singhal, Tamar Rott Shaham,
-            Zhihao Xia, Spandan Madan, Ishit Mehta, Mustafa Işık, Pradyumna Reddy, James
-            Hong, Karima Ma, Thibaut Ehret, Holly Jackson, Lucy Chai, Sai Praveen Bangaru,
-            Difan Liu, Yash Belhe, Yotam Nitzan, Lucas Valença, Caroline Chan, Goutam
-            Bhat, Prafull Sharma, Yinbo Chen, Ke Wang, Jiteng Mu, Tianwei Yin, Hadi
-            AlZayer.
+      <Divider title="Technology"/>
+      <div className="">
+      </div>
+      <Divider title="Past student collaborators"/>
+      <div className="">
+        <p className="pt-2 text-sm text-justify">
+          I have had the great privilege of mentoring and collaborating with wonderful students:
+          <Students/>
         </p>
       </div>
     </main>
