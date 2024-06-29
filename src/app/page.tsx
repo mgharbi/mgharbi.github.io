@@ -331,7 +331,7 @@ export default function Home() {
           <p className="pt-4 text-sm text-justify">
             <span className="font-semibold">Bio. </span>
               I am a co-founder and research scientist at a stealth startup. I can hopefully share more details soon.
-              Previously, I was a Research Scientist at Adobe.
+              Previously, I was a Research Scientist at <Link className="hover:text-sky-500 font-semibold" href="https://research.adobe.com/">Adobe Research</Link>.
               Before that, I was
               a PhD student at <Link className="hover:text-sky-500 font-semibold" href="https://www.csail.mit.edu/" target="_blank">MIT CSAIL</Link>,
               where I had the chance to work under the
@@ -351,10 +351,10 @@ export default function Home() {
       <div className="">
         <Projects/>
       </div>
-      <Divider title="Technology"/>
+      {/* <Divider title="Technology"/>
       <div className="">
-      </div>
-      <Divider title="Past student collaborators"/>
+      </div> */}
+      <Divider title="Past students"/>
       <div className="">
         <p className="pt-2 text-sm text-justify">
           I have had the great privilege of mentoring and collaborating with wonderful students:
