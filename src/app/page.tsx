@@ -3,9 +3,10 @@ import Link from "next/link";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGoogleScholar, faGithub, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faCamera, faHouse, faFilePdf, faCodeBranch } from '@fortawesome/free-solid-svg-icons'
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 
-function Project({project}) {
+function Project({project}: {project: ProjectInterface}) {
   const authorList = project.authors.map((author, index) => {
     // if (author == "Michaël Gharbi" ){
     //   author = <span className="font-semibold">{author}</span>;
@@ -68,6 +69,17 @@ function Project({project}) {
   );
 }
 
+interface ProjectInterface {
+  title: string;
+  authors: string[];
+  venue: string;
+  year: string;
+  homepage: string;
+  code: string;
+  pdf: string;
+  image: string;
+}
+
 function Projects() {
   let projects = [
     {
@@ -118,7 +130,7 @@ function SocialLinks() {
         links.map(([link, icon], index) => (
           <li className="w-6 sm:w-5" key={index}>
             <Link href={link.toString()} className="hover:text-sky-500">
-              <FontAwesomeIcon icon={icon} fixedWidth listItem/> 
+              <FontAwesomeIcon icon={icon as IconProp} fixedWidth listItem/> 
             </Link>
           </li>
       ))
@@ -127,7 +139,7 @@ function SocialLinks() {
   );
 }
 
-function Divider({title}) {
+function Divider({title}: { title: string }) {
   return (
     <div className="flex items-center">
       <div className="flex-1 border-t-2 border-gray-200"></div>
