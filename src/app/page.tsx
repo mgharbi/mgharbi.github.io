@@ -5,7 +5,7 @@ import { faGoogleScholar, faGithub, faTwitter, faLinkedin } from '@fortawesome/f
 import { faCamera, faHouse, faFilePdf, faCodeBranch } from '@fortawesome/free-solid-svg-icons'
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
-import profilePic from '../../public/profile.png'
+// import profilePic from '../../public/profile.png'
 
 function Project({project}: {project: ProjectInterface}) {
   const authorList = project.authors.map((author, index) => {
@@ -323,7 +323,8 @@ export default function Home() {
         <div className=" flex flex-col items-center">
           <div className="flex-none w-36 h-36">
           <Image
-            src={profilePic}
+            src="profile.png"
+            // src={profilePic}
             width={500}
             height={500}
             alt="Picture of the author"
