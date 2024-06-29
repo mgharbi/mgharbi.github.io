@@ -15,7 +15,7 @@ const nextConfig = {
    */
   // basePath: "/Users/mgharbi/projects/mgharbi-home/out",
   // basePath: "/mgharbi.github.io",
-  basePath: "/",
+  basePath: "",
   // assetPrefix: "/Users/mgharbi/projects/mgharbi-home/out",
 
   /**
