@@ -36,7 +36,7 @@ function Project({project}: {project: ProjectInterface}) {
             />
             ) : null
           }
-          { project.alt_image ? (
+          {/* { project.alt_image ? (
             <Image
               src={`/images/projects/${project.alt_image}`}
               width={500}
@@ -45,7 +45,7 @@ function Project({project}: {project: ProjectInterface}) {
               className="absolute hover:opacity-0"
             />
             ) : null
-          }
+          } */}
         </div>
       </Link>
       <div className="ps-2 text-sm sm:px-4">
@@ -230,13 +230,19 @@ export default function Home() {
           <Students/>
         </p>
       </div>
+      {/* <Divider title="Technology"/>
+      <div className="sm:pt-0 sm:px-4">
+        <ul className="py-4 text-sm text-justify">
+          <li>demosaicking, denoise, sr in Lightroom</li>
+          <li>real-time ML viewfinder Google Pixel</li>
+          <li>Firefly</li>
+          <li>denoiser illustrator, stager</li>
+        </ul>
+      </div> */}
       <Divider title="Research"/>
       <div className="">
         <Projects/>
       </div>
-      {/* <Divider title="Technology"/>
-      <div className="">
-      </div> */}
     </main>
   );
 }

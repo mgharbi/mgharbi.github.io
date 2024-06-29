@@ -15,8 +15,7 @@ export let projects = [
         "homepage": "https://tianweiy.github.io/dmd2/",
         "code": "https://github.com/tianweiy/DMD2",
         "pdf": "https://arxiv.org/abs/2405.14867",
-        // "alt_image": "dmd.png",
-        // "image": "dmd2.png"
+        "image": ""
     },
     {
         "title": "One-step Diffusion with Distribution Matching Distillation",
@@ -24,9 +23,9 @@ export let projects = [
         "venue": "CVPR",
         "year": "2024",
         "homepage": "https://tianweiy.github.io/dmd/",
+        "code": "",
         "pdf": "https://arxiv.org/abs/2311.18828",
-        // "alt_image": "dmd2.png",
-        // "image": "dmd.png"
+        "image": ""
     },
     {
         "title": "Magic Fixup: Streamlining Photo Editing by Watching Dynamic Videos",
@@ -43,7 +42,6 @@ export let projects = [
         "homepage": "https://magic-fixup.github.io/",
         "code": "",
         "pdf": "https://arxiv.org/abs/2403.13044",
-        "alt_image": "",
         "image": "",
     },
     {
@@ -62,7 +60,6 @@ export let projects = [
         "homepage": "https://lazydiffusion.github.io/",
         "code": "",
         "pdf": "https://arxiv.org/abs/2404.12382",
-        "alt_image": "",
         "image": ""
     },
     {
@@ -81,7 +78,6 @@ export let projects = [
         "homepage": "https://jitengmu.github.io/Editable_Image_Elements/",
         "code": "",
         "pdf": "https://arxiv.org/abs/2404.16029",
-        "alt_image": "",
         "image": ""
     },
     {
@@ -99,7 +95,6 @@ export let projects = [
         "homepage": "https://yinboc.github.io/infd/",
         "code": "",
         "pdf": "https://arxiv.org/abs/2406.07480",
-        "alt_image": "",
         "image": ""
     },
     {
@@ -119,7 +114,6 @@ export let projects = [
         "homepage": "",
         "code": "",
         "pdf": "https://arxiv.org/abs/2312.10540",
-        "alt_image": "",
         "image": ""
     },
     {
