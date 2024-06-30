@@ -635,6 +635,6 @@ export let projects = [
         "homepage": "https://groups.csail.mit.edu/graphics/gaussian_approximation/",
         "code": "",
         "pdf": "http://dspace.mit.edu/bitstream/handle/1721.1/73685/MIT-CSAIL-TR-2012-032.pdf?sequence=1",
-        "image": "gaussian.png"
+        "image": ""
     },
 ];
