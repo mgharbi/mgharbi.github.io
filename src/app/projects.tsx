@@ -15,7 +15,7 @@ export let projects = [
         "homepage": "https://tianweiy.github.io/dmd2/",
         "code": "https://github.com/tianweiy/DMD2",
         "pdf": "https://arxiv.org/abs/2405.14867",
-        "image": "dmd2.png"
+        "image": ""
     },
     {
         "title": "One-step Diffusion with Distribution Matching Distillation",
@@ -25,7 +25,7 @@ export let projects = [
         "homepage": "https://tianweiy.github.io/dmd/",
         "code": "",
         "pdf": "https://arxiv.org/abs/2311.18828",
-        "image": "dmd.png"
+        "image": ""
     },
     {
         "title": "Magic Fixup: Streamlining Photo Editing by Watching Dynamic Videos",
@@ -42,7 +42,7 @@ export let projects = [
         "homepage": "https://magic-fixup.github.io/",
         "code": "",
         "pdf": "https://arxiv.org/abs/2403.13044",
-        "image": "magic_fu.png",
+        "image": "",
     },
     {
         "title": "Lazy Diffusion Transformer for Interactive Image Editing",
