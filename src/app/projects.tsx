@@ -10,7 +10,7 @@ export let projects = [
             "Frédo Durand",
             "William T. Freeman",
         ],
-        "venue": "arXiv",
+        "venue": "NeurIPS",
         "year": "2024",
         "homepage": "https://tianweiy.github.io/dmd2/",
         "code": "https://github.com/tianweiy/DMD2",
