@@ -207,7 +207,7 @@ export default function Home() {
           </div>
           <p className="pt-4 text-sm text-justify">
             <span className="font-semibold">Bio. </span>
-              I am a founder at <a href="https://preview.reve.art/">Reve</a>.
+              I am a founder at <Link className="hover:text-sky-500 font-semibold" href="https://preview.reve.art/">Reve</Link>.
               Previously, I was a Research Scientist at <Link className="hover:text-sky-500 font-semibold" href="https://research.adobe.com/">Adobe Research</Link>.
               Before that, I was
               a PhD student at <Link className="hover:text-sky-500 font-semibold" href="https://www.csail.mit.edu/" target="_blank">MIT CSAIL</Link>,
