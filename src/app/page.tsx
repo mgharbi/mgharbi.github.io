@@ -199,7 +199,7 @@ export default function Home() {
         <div className="pt-2 pb-4 sm:pt-0 sm:px-4">
           <div className="flex flex-col items-center sm:items-start">
             <h1 className="text-2xl">Michaël Gharbi</h1>
-            <h3 className="text-gray-600">Co-Founder & Research Scientist</h3>
+            <h3 className="text-gray-600">Founder & Research Scientist</h3>
             <ul className="flex flex-col my-1 text-sm items-center sm:items-start">
               <li><a href="mailto:michael.yanis.gharbi@gmail.com" className="hover:text-sky-500">michael.yanis.gharbi@gmail.com</a></li>
               <li>+ 1 (857)-210-9559</li>
@@ -207,7 +207,7 @@ export default function Home() {
           </div>
           <p className="pt-4 text-sm text-justify">
             <span className="font-semibold">Bio. </span>
-              I am a co-founder and research scientist at a stealth startup. I can hopefully share more details soon.
+              I am a founder at <a href="https://preview.reve.art/">Reve</a>.
               Previously, I was a Research Scientist at <Link className="hover:text-sky-500 font-semibold" href="https://research.adobe.com/">Adobe Research</Link>.
               Before that, I was
               a PhD student at <Link className="hover:text-sky-500 font-semibold" href="https://www.csail.mit.edu/" target="_blank">MIT CSAIL</Link>,
