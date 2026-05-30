@@ -213,8 +213,8 @@ export default function Home() {
               a PhD student at <Link className="hover:text-sky-500 font-semibold" href="https://www.csail.mit.edu/" target="_blank">MIT CSAIL</Link>,
               where I had the chance to work under the
               supervision of <Link className="hover:text-sky-500 font-semibold" href="http://people.csail.mit.edu/fredo/" target="_blank">Prof. Frédo Durand</Link>. My research
-              interests include computational photography,
-              joining MIT, I completed my undergraduate studies
+              interests include computational photography, computer graphics and computer vision.
+              Before joining MIT, I completed my undergraduate studies
               in France, at <Link className="hover:text-sky-500 font-semibold" href="https://www.polytechnique.edu/en" target="_blank">École Polytechnique</Link>, with a focus on
               Applied Mathematics.
           </p>
