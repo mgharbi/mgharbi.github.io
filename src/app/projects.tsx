@@ -1,5 +1,88 @@
 export let projects = [
     {
+        "title": "Activation-Norm Maximization to Accelerate Training in Flow-Matching Transformers",
+        "authors": [
+            "Yash Belhe",
+            "Wesley Chang",
+            "Tzu-Mao Li",
+            "Ravi Ramamoorthi",
+            "Michaël Gharbi",
+        ],
+        "venue": "CVPR Findings Workshop",
+        "year": "2026",
+        "homepage": "",
+        "code": "",
+        "pdf": "",
+        "image": ""
+    },
+    {
+        "title": "PromptRL: Prompt Matters in RL for Flow-Based Image Generation",
+        "authors": [
+            "Fu-Yun Wang",
+            "Han Zhang",
+            "Michaël Gharbi",
+            "Hongsheng Li",
+            "Taesung Park",
+        ],
+        "venue": "arXiv",
+        "year": "2026",
+        "homepage": "",
+        "code": "https://github.com/G-U-N/UniRL",
+        "pdf": "",
+        "image": ""
+    },
+    {
+        "title": "UniRL-Zero: Reinforcement Learning on Unified Models with Joint Language Model and Diffusion Model Experts",
+        "authors": [
+            "Fu-Yun Wang",
+            "Han Zhang",
+            "Michaël Gharbi",
+            "Hongsheng Li",
+            "Taesung Park",
+        ],
+        "venue": "arXiv",
+        "year": "2025",
+        "homepage": "",
+        "code": "https://github.com/G-U-N/UniRL",
+        "pdf": "https://arxiv.org/abs/2510.17937",
+        "image": ""
+    },
+    {
+        "title": "Automatic Sampling for Discontinuities in Differentiable Shaders",
+        "authors": [
+            "Yash Belhe",
+            "Ishit Mehta",
+            "Wesley Chang",
+            "Iliyan Georgiev",
+            "Michaël Gharbi",
+            "Ravi Ramamoorthi",
+            "Tzu-Mao Li",
+        ],
+        "venue": "Siggraph Asia (Best Paper)",
+        "year": "2025",
+        "homepage": "https://yashbelhe.github.io/asd/index.html",
+        "code": "https://github.com/yashbelhe/ASD",
+        "pdf": "https://cseweb.ucsd.edu/~ravir/ybelhesiga25.pdf",
+        "image": ""
+    },
+    {
+        "title": "Magic Fixup: Streamlining Photo Editing by Watching Dynamic Videos",
+        "authors": [
+            "Hadi Alzayer",
+            "Zhihao Xia",
+            "Xuaner (Cecilia) Zhang",
+            "Eli Shechtman",
+            "Jia-Bin Huang",
+            "Michaël Gharbi",
+        ],
+        "venue": "Siggraph Asia",
+        "year": "2025",
+        "homepage": "https://magic-fixup.github.io/",
+        "code": "",
+        "pdf": "https://arxiv.org/abs/2403.13044",
+        "image": "",
+    },
+    {
         "title": "Improved Distribution Matching Distillation for Fast Image Synthesis",
         "authors": [
             "Tianwei Yin",
@@ -26,23 +109,6 @@ export let projects = [
         "code": "",
         "pdf": "https://arxiv.org/abs/2311.18828",
         "image": ""
-    },
-    {
-        "title": "Magic Fixup: Streamlining Photo Editing by Watching Dynamic Videos",
-        "authors": [
-            "Hadi Alzayer",
-            "Zhihao Xia",
-            "Xuaner (Cecilia) Zhang",
-            "Eli Shechtman",
-            "Jia-Bin Huang",
-            "Michaël Gharbi",
-        ],
-        "venue": "arXiv",
-        "year": "2024",
-        "homepage": "https://magic-fixup.github.io/",
-        "code": "",
-        "pdf": "https://arxiv.org/abs/2403.13044",
-        "image": "",
     },
     {
         "title": "Lazy Diffusion Transformer for Interactive Image Editing",
