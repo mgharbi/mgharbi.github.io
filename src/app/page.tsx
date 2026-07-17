@@ -138,7 +138,7 @@ function SocialLinks() {
     ["https://github.com/mgharbi", faGithub],
     ["https://www.linkedin.com/in/michaelgharbi/", faLinkedin],
     ["https://twitter.com/m_gharbi", faTwitter],
-    ["https://www.vernissage-indigenous.com/", faCamera],
+    ["/photography", faCamera],
   ];
   return (
     <ul className="flex flex-row space-x-2 text-sm my-2 items-center">
