@@ -199,7 +199,7 @@ export default function Home() {
         <div className="pt-2 pb-4 sm:pt-0 sm:px-4">
           <div className="flex flex-col items-center sm:items-start">
             <h1 className="text-2xl">Michaël Gharbi</h1>
-            <h3 className="text-gray-600">Founder & Research Scientist</h3>
+            <h3 className="text-gray-600">Member of Technical Staff at OpenAI</h3>
             <ul className="flex flex-col my-1 text-sm items-center sm:items-start">
               <li><a href="mailto:michael@reve.art" className="hover:text-sky-500">michael@reve.art</a></li>
               <li>+ 1 (857)-210-9559</li>
@@ -207,10 +207,10 @@ export default function Home() {
           </div>
           <p className="pt-4 text-sm text-justify">
             <span className="font-semibold">Bio. </span>
-              I am a founder at <Link className="hover:text-sky-500 font-semibold" href="https://preview.reve.art/">Reve</Link>.
-              Previously, I was a Research Scientist at <Link className="hover:text-sky-500 font-semibold" href="https://research.adobe.com/">Adobe Research</Link>.
-              Before that, I was
-              a PhD student at <Link className="hover:text-sky-500 font-semibold" href="https://www.csail.mit.edu/" target="_blank">MIT CSAIL</Link>,
+              I am a Member of Technical Staff at <Link className="hover:text-sky-500 font-semibold" href="https://openai.com/" target="_blank">OpenAI</Link>.
+              Previously, I was Founder and Chief Scientist at <Link className="hover:text-sky-500 font-semibold" href="https://preview.reve.art/" target="_blank">Reve</Link>, which I co-founded with <Link className="hover:text-sky-500" href="https://christiancantrell.com/#about" target="_blank">Christian Cantrell</Link>, <Link className="hover:text-sky-500" href="https://taesung.me/" target="_blank">Taesung Park</Link>, <Link className="hover:text-sky-500" href="https://www.linkedin.com/in/jonwatte/" target="_blank">Jon Watte</Link>, and <Link className="hover:text-sky-500" href="https://www.linkedin.com/in/mikespeiser/" target="_blank">Mike Speiser</Link>.
+              Before that, I was a Research Scientist at <Link className="hover:text-sky-500 font-semibold" href="https://research.adobe.com/">Adobe Research</Link>,
+              and a PhD student at <Link className="hover:text-sky-500 font-semibold" href="https://www.csail.mit.edu/" target="_blank">MIT CSAIL</Link>,
               where I had the chance to work under the
               supervision of <Link className="hover:text-sky-500 font-semibold" href="http://people.csail.mit.edu/fredo/" target="_blank">Prof. Frédo Durand</Link>. My research
               interests include computational photography, computer graphics and computer vision.
