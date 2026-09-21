@@ -201,7 +201,6 @@ export default function Home() {
             <h1 className="text-2xl">Michaël Gharbi</h1>
             <h3 className="text-gray-600">Member of Technical Staff at OpenAI</h3>
             <ul className="flex flex-col my-1 text-sm items-center sm:items-start">
-              <li><a href="mailto:michael@reve.art" className="hover:text-sky-500">michael@reve.art</a></li>
               <li>+ 1 (857)-210-9559</li>
             </ul>
           </div>
